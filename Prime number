@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Prime {
+    public static void main(String[] args){   
+        Scanner sc = new Scanner(System.in);      
+
+        int x, y;
+        int pCount = 0;
+
+        System.out.print("Enter two number :\n");
+        x = sc.nextInt();
+        y = sc.nextInt();
+
+        for (int i = x; i <= y ; i++)
+        {
+            int dCount = 0;
+
+            for(int j = 1; j <= i; j++){
+                if(i % j == 0)
+                    dCount++;
+            } 
+
+            if(dCount == 2)
+                    pCount++;
+
+        }
+        System.out.println("Number of prime numbers : " + pCount );
+    }
+}
